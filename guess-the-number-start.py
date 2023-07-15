@@ -17,7 +17,57 @@
 ## Let user enter number and submit with enter key
 ## Check user's number against the actual answer
 ## If correct show the answer. If wrong give another chance + message
+
+#Imports
 import os
+import random
+
+#Clear console
 os.system('cls' if os.name == 'nt' else 'clear')
 
+#Print welcome message
 print("Hey, welcome to the numbers game!")
+
+#Generate pseudorandom number
+num = random.randrange(1, 100)
+print("Number generated: ", num)
+
+#Ask user to submit a number
+print("Please submit any whole number between 1 - 100: ", )
+#Let user submit a number and store it in a variable "input"
+
+input = 0
+
+def myInp():
+    global input
+    input = int(input())
+
+#Logic to check number 'num' vs 'input'
+## 3 options
+# too low, too high, right
+
+play = bool(True)
+
+while play:
+    
+    if input > num:
+        print("number too high")
+        print("try again!")
+        print("Please submit any whole number between 1 - 100: ", )
+        myInp()
+        
+    elif input < num:
+        print("number too low")
+        print("try again")
+        print("Please submit any whole number between 1 - 100: ", )
+        myInp()
+    
+    else: 
+        print("number is right!") 
+        print("Well played")
+        play = False
+
+
+
+
+
