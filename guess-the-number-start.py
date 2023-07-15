@@ -53,14 +53,12 @@ while play:
     if input > num:
         print("number too high")
         print("try again!")
-        print("Please submit any whole number between 1 - 100: ", )
-        myInp()
+   
         
     elif input < num:
         print("number too low")
         print("try again")
-        print("Please submit any whole number between 1 - 100: ", )
-        myInp()
+
     
     else: 
         print("number is right!") 
